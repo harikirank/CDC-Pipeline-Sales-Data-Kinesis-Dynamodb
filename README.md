@@ -14,7 +14,7 @@ The main motive of this project is to build and end to end real time CDC capture
 * **To Allow quick decision making based on the real time data that is available.**
 
 # Architecture Diagram
-![Architecture Diagram](./Architecture Diagram/Architecture_Diagram_CDC_Data_Capture.png?raw=true)
+![Architecture Diagram](./Architecture_Diagram/Architecture_Diagram_CDC_Data_Capture.png?raw=true)
 
 # Architecture Diagram Steps
 1. AWS Lambda Mock Sales Data Generator initiates the process by generating mock sales data.
