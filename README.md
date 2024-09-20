@@ -19,13 +19,13 @@ The main motive of this project is to build and end to end real time CDC capture
 # Architecture Diagram Steps
 1. AWS Lambda Mock Sales Data Generator initiates the process by generating mock sales data.
 2. The mock sales data is stored in Amazon DynamoDB Store Sales Data.
-3. DynamoDB Stream will Stream Changes made to Sales Data  the changes made to the sales data.
+3. DynamoDB Stream will Stream the Changes made to Sales Data.
 4. EventBridge Pipe captures the stream of changes from DynamoDB.
 5. Kinesis Data Streams will Capture the stream of changes from EventBridge.
 6. Amazon Kinesis Data Firehose batches the stream of data from kinesis data streams.
 7. AWS Lambda performs necessary transformations on the batch of data.
 8. AWS Lambda passes the transformed data back to Amazon Kinesis Data Firehose.
-9. Amazon Simple Storage Service (S3) bucket stores the streaming data from Kinesis Data Firehose.
+9. S3 bucket stores the streaming data from Kinesis Data Firehose.
 10. AWS Glue Crawler creates a schema for the sales data files stored in the S3 bucket.
 11. Glue Data Catalog stores the schema created by AWS Glue Crawler.
 12. Amazon Athena allows ad-hoc querying of the data stored in the Data Catalog.
