@@ -80,7 +80,7 @@ The main motive of this project is to build and end to end real time CDC capture
     - Observing how data streams into Kinesis shards based on primary key hash.
     ![Data Streaming](./Images_Watermarked/12_data_coming_into_the_shards_based_on_the_hash_for_the_primary_key.png?raw=true)
 
-13. **Updating the quantity of an item in DynamoDB**
+13. **Update the quantity of an item in DynamoDB and see the change captured in the stream**
     - Changed the value of quantity from 5 to 35.
     ![Quantity Update](./Images_Watermarked/13_changed_quantity_from_5_to_35_in_dynamodb.png?raw=true)
 
@@ -105,11 +105,11 @@ The main motive of this project is to build and end to end real time CDC capture
     ![Lambda Setup](./Images_Watermarked/18_Creating_lambda_for_transforming_firehose_data.png?raw=true)
 
 19. **Lambda Code for Transformation (Part 1)**
-    - Showcasing the initial part of the Lambda function code used for transforming data.
+    - Showcasing the initial part of the Lambda function code used for transforming data. We are casting the data types to the correct type.
     ![Lambda Code Part 1](./Images_Watermarked/19_lambda_code_for_transformation_1.png?raw=true)
 
 20. **Lambda Code for Transformation (Part 2)**
-    - The continuation of the Lambda function code for data transformation.
+    - The continuation of the Lambda function code for data transformation. We are adding the timestamp and the event type details so that we can accurately update our target.
     ![Lambda Code Part 2](./Images_Watermarked/20_lambda_code_for_transformation_2.png?raw=true)
 
 21. **Change Execution Time of Lambda**
