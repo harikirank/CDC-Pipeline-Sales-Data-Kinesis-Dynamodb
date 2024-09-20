@@ -112,7 +112,7 @@ The main motive of this project is to build and end to end real time CDC capture
     - The continuation of the Lambda function code for data transformation. We are adding the timestamp and the event type details so that we can accurately update our target.
     ![Lambda Code Part 2](./Images_Watermarked/20_lambda_code_for_transformation_2.png?raw=true)
 
-21. **Change Execution Time of Lambda**
+21. **Change Execution Time out of Lambda**
     - Adjusting the execution time settings for the Lambda function to optimize performance.
     ![Lambda Execution Time](./Images_Watermarked/21_change_execution_time_of_lambda.png?raw=true)
 
@@ -121,7 +121,7 @@ The main motive of this project is to build and end to end real time CDC capture
     ![Lambda in Firehose](./Images_Watermarked/22_adding_the_lambda_in_firehose.png?raw=true)
 
 23. **Adding Permissions for the Lambda Role**
-    - Setting up the necessary IAM permissions for the Lambda role to function within the AWS ecosystem. Ideally, in a production environment, you will never give full permission to these IAM roles or IAM users. Follow the principle of least privilege.
+    - Setting up the necessary IAM permissions for the Lambda role to function within the AWS ecosystem. Ideally, in a production environment, you will never give full permission to these IAM roles or IAM users. Always follow the principle of least privilege and don't give more permissions than necessary to complete the task at hand.
     ![Lambda Permissions](./Images_Watermarked/22_adding_the_required_permissions_for_the_lambda_role.png?raw=true)
 
 24. **Setting Up the S3 Destination in Firehose**
@@ -137,11 +137,11 @@ The main motive of this project is to build and end to end real time CDC capture
     ![Publishing Data](./Images_Watermarked/25_publishing_new_data_to_dynamodb_for_ingestion_into_s3.png?raw=true)
 
 27. **Data Ingestion into S3**
-    - Monitoring the process of data getting ingested into the S3 bucket from DynamoDB.
+    - Monitoring the data getting captured in the S3 bucket from DynamoDB.
     ![Data Ingestion](./Images_Watermarked/26_data_getting_ingested_into_s3.png?raw=true)
 
 28. **Ingested Data in S3**
-    - Verification of data successfully ingested into the S3 bucket.
+    - Verification of data successfully loaded into the S3 bucket.
     ![Ingested Data Verification](./Images_Watermarked/27_ingested_data_in_s3.png?raw=true)
 
 29. **Data Ingested as JSON in S3 Bucket**
@@ -183,7 +183,8 @@ The main motive of this project is to build and end to end real time CDC capture
 38. **Querying Data in S3 Using Athena**
     - Using Athena to perform SQL queries on the data stored in S3, made accessible through Glue's metadata tables.
     ![Querying with Athena](./Images_Watermarked/37_querying_the_data_in_s3_using_athena.png?raw=true)
-
+39. **We can build dashboards on top of this and the data will be updated in real time as changes are made to the corresponding DynamoDb table**
+    
 
 
 
